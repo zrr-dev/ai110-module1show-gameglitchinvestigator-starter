@@ -7,16 +7,16 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - What did the game look like the first time you ran it?
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
-
+the game was organized and had 3 buttons, one to submit guesses, one to make a new game and one to show hints. the hints were backwards and never changes based on the different numbers I added. 
 **Bug Reproduction Log**
 
 Document at least 3 bugs you found. Add rows as needed.
 
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
 |-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
-| | | | |
+|50 |go higher |go lower |hints are backwards |app.py
+|40 |go higher |go lower |hints are backwards |app.py
+|30 |go higher |go lower |hints are backwards |app.py
 
 ---
 
