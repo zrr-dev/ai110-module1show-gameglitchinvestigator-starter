@@ -28,46 +28,25 @@ It wrote the code, ran away, and now the game is unplayable.
 - [ ] Describe the game's purpose.
 - [ ] Detail which bugs you found.
 - [ ] Explain what fixes you applied.
-## 2. How did you use AI as a teammate?
-
-**AI Suggestion 1: Accepted**
-* **What the AI suggested:** When I asked how to stop the game from resetting every time I clicked "Submit", Claude suggested wrapping the random number generator in an `if "secret_number" not in st.session_state:` block.
-* **Why it was correct:** This was correct because Streamlit reruns the entire `app.py` script on every button click. Using `session_state` forces the app to remember the secret number between runs instead of generating a new one.
-* **How I verified it:** I accepted the code, ran the live app using `python -m streamlit run app.py`, and verified in the "Developer Debug Info" tab that the secret number stayed exactly the same across multiple guesses.
-
-**AI Suggestion 2: Rejected / Modified**
-* **What the AI suggested:** When I asked Claude to generate the `pytest` case for `check_guess`, it initially suggested writing a complex test that mocked Streamlit's session state and UI components.
-* **Why I rejected or changed it:** This was over-engineered and out of scope. The `check_guess` function in `logic_utils.py` is pure Python logic and just takes integers as arguments. I didn't need to test the Streamlit UI, just the logic. 
-* **How I verified it:** I asked Claude to simplify the test to only pass basic integers into `check_guess`. I verified the simpler version worked by running `python -m pytest` in the terminal and watching the tests pass successfully.
 
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
- ## Demo Walkthrough
-1. The game initializes and securely generates a secret number in the background (e.g., 50).
-2. The user enters an initial guess of 25 and clicks Submit.
-3. The game processes the input and correctly displays a "Too Low" hint.
-4. The user enters a new guess of 75 and clicks Submit.
-5. The game processes the input and correctly displays a "Too High" hint.
-6. The user enters the correct guess of 50.
-7. The game displays a success message, updates the score accurately, and ends.
+1. <!-- Describe this step -->
+2. <!-- Describe this step -->
+3. <!-- Describe this step -->
+4. <!-- Describe this step -->
+5. <!-- Add more steps as needed -->
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
 ## 🧪 Test Results
 
 ```
-## Test Results
-```text
-============================= test session starts =============================
-platform win32 -- Python 3.13.0, pytest-9.1.1
-rootdir: C:\Zia Files\CodePath\ai110-module1show-gameglitchinvestigator-starter
-collected 1 item
-
-tests\test_game_logic.py .                                               [100%]
-
-============================== 1 passed in 0.05s ==============================
+# Paste your pytest output here, e.g.:
+# pytest tests/
+# ========================= X passed in 0.XXs =========================
 ```
 
 ## 🚀 Stretch Features

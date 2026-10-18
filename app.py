@@ -3,6 +3,7 @@ import streamlit as st
 
 from logic_utils import check_guess, get_range_for_difficulty, parse_guess, update_score
 
+
 st.set_page_config(page_title="Glitchy Guesser", page_icon="🎮")
 
 st.title("🎮 Game Glitch Investigator")
@@ -79,7 +80,7 @@ if new_game:
     st.session_state.pop(f"guess_input_{difficulty}", None)
     st.success("New game started.")
     st.rerun()
-# FIXME: Logic breaks here: logic for handling the game state was not properly implemented. the game is supposed to reset the attempts and secret number when the user clicks the new game button. 
+
 if st.session_state.status != "playing":
     if st.session_state.status == "won":
         st.success("You already won. Start a new game to play again.")
